@@ -15,12 +15,13 @@ public class EmojiGame {
 
     private Game game;
 
+    @RequiresApi(api = Build.VERSION_CODES.R)
     public EmojiGame() {
-        List<String> content = new ArrayList<>();
-        content.add("A");
-        content.add("B");
-        content.add("O");
-        Collections.shuffle(content);
+        List<String> content = List.of("A", "B", "C");
+//        content.add("A");
+//        content.add("B");
+//        content.add("C");
+       // Collections.shuffle(content);
         game = new Game<>(content);
     }
 

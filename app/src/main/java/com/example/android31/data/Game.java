@@ -3,6 +3,7 @@ package com.example.android31.data;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Game<CardContent> {
@@ -13,7 +14,9 @@ public class Game<CardContent> {
         for (int i = 0; i < contents.size(); i++) {
             cards.add(new Card<>(false, false, contents.get(i), i * 2));
             cards.add(new Card<>(false, false, contents.get(i), i * 2 + 1));
+
         }
+        Collections.shuffle(cards);
     }
 
     public void choose(Card<CardContent> card) {
